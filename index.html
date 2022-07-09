@@ -8,6 +8,66 @@
     <script defer src="/dist/script.js"></script>
   </head>
   <body>
-    <h1>My name is lawrence</h1>
+    <!-- Header section -->
+    <header class="header">
+      <div class="container d-flex">
+        <a href="#" class="logo">
+          <img src="./img/logo.png" aria-label="logo" alt="Logo" />
+        </a>
+
+        <!-- toggle menu -->
+        <div class="toggle-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- header navigation -->
+        <nav class="nav">
+          <ul role="list" class="nav__list">
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">pricing</a></li>
+            <li><a href="#">portfolio</a></li>
+          </ul>
+        </nav>
+
+        <button class="btn btn-inverse">get started</button>
+      </div>
+    </header>
+
+    <!-- Main section -->
+    <main>
+      <!-- hero section -->
+      <section class="hero">
+        <div class="d-grid">
+          <div class="hero__text">
+            <h1>we turn smart ideas into <span>creative</span>solutions</h1>
+            <p>
+              Digital agency creating world-changing digital experiences by
+              keeping the bussinness model simple.
+            </p>
+            <button class="btn btn-pry">get solutions</button>
+          </div>
+
+          <div aria-label="hero-img" class="hero__img"></div>
+        </div>
+      </section>
+
+      <!-- sponsored section -->
+      <section class="sponsored">
+        <div class="container d-grid">
+          <div class="row">
+            <img src="./img/Airbnb Logo.png" alt="image" />
+            <img src="./img/Hubspot Logo.png" alt="image" />
+            <img src="./img/Google Logo.png" alt="image" />
+          </div>
+
+          <div class="row">
+            <img src="./img/Microsoft Logo.png" alt="image" />
+            <img src="./img/Walmart Logo.png" alt="image" />
+            <img src="./img/FedEx Logo.png" alt="image" />
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

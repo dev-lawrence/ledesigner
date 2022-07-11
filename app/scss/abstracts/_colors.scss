@@ -1,2 +1,11 @@
-$pink: white;
-$bg-clr: black;
+:root {
+  --accent-clr-400: hsl(43, 100%, 50%);
+  --accent-clr-350: hsl(0, 0%, 96%);
+  --accent-clr-300: hsl(0, 0%, 95%);
+  --accent-clr-250: hsl(235, 14%, 15%);
+  --accent-clr-200: hsl(231, 13%, 11%);
+
+  --primary-clr: hsl(231, 13%, 11%);
+
+  --text-clr: hsl(0, 0%, 95%);
+}

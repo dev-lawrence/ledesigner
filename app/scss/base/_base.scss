@@ -1,0 +1,7 @@
+@use 'abstracts' as *;
+
+body {
+  background-color: var(--bg-clr);
+  color: var(--light-clr);
+  font-family: $pry-font;
+}

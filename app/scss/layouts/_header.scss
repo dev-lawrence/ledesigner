@@ -1,0 +1,54 @@
+@use 'abstracts' as *;
+
+#header {
+  position: fixed;
+  background-color: var(--bg-clr);
+  width: 100%;
+
+  .container {
+    position: relative;
+    padding: $padding-100;
+    @include flex(center, space-between);
+  }
+
+  .logo {
+    z-index: 10;
+  }
+}
+
+.toggle-menu {
+  border: 0;
+  width: 10%;
+  font-size: $fs-150;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white-clr);
+
+  @include medium {
+    display: none;
+  }
+}
+
+//add close icon
+.toggle-menu i.closeIcon::before {
+  content: '\f00d';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: $fs-150;
+}
+
+// hide get started link
+.hide {
+  display: none;
+}
+
+@include small {
+  .cta {
+    display: none;
+  }
+}
+
+.cta {
+  display: none;
+}

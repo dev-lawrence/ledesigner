@@ -1,0 +1,80 @@
+@use 'abstracts' as *;
+
+.nav {
+  display: none;
+}
+
+@include small {
+  .nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    transform: translateX(rem(-300));
+    background-color: var(--accent-clr-250);
+    transition: transform 0.4s ease-in;
+
+    &__list {
+      padding: rem(100) rem(16);
+      transform: translateX(rem(-100));
+      transition: transform 0.8s ease-in-out;
+
+      li {
+        padding: rem(14) 0;
+      }
+
+      a {
+        color: var(--white-clr);
+        text-transform: capitalize;
+        font-size: rem(20);
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--accent-clr-400);
+        }
+
+        &.active {
+          color: var(--accent-clr-400);
+        }
+      }
+
+      &.appear {
+        transform: translateX(0);
+      }
+    }
+
+    &.showMenu {
+      transform: translateX(0);
+    }
+  }
+}
+
+@include medium {
+  .nav {
+    display: block;
+    &__list {
+      @include flex(center, center);
+    }
+
+    li {
+      padding: 0 rem(16);
+    }
+
+    a {
+      color: var(--white-clr);
+      text-transform: capitalize;
+      font-size: rem(16);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--accent-clr-400);
+      }
+
+      &.active {
+        color: var(--accent-clr-400);
+      }
+    }
+  }
+}

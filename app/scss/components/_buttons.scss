@@ -1,0 +1,19 @@
+@use 'abstracts' as *;
+
+// nav button
+@include medium {
+  .cta {
+    display: block;
+    text-transform: capitalize;
+    background-color: var(--accent-clr-350);
+    padding: rem(10) rem(20);
+    font-size: rem(16);
+    border-radius: rem(6);
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+
+    &:focus {
+      transform: scale(0.98);
+    }
+  }
+}

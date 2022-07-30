@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>LeDesigner</title>
     <link rel="stylesheet" href="/dist/style.css" />
+    <script src="https://kit.fontawesome.com/9acea6f878.js"></script>
     <script defer src="/dist/script.js"></script>
   </head>
   <body>
     <!-- Header section -->
-    <header class="header">
+    <header id="header">
       <div class="container d-flex">
         <a href="#" class="logo">
           <img src="./img/logo.png" aria-label="logo" alt="Logo" />
@@ -23,14 +24,16 @@
         <!-- header navigation -->
         <nav class="nav">
           <ul role="list" class="nav__list">
+            <li><a class="active" href="#">home</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">services</a></li>
             <li><a href="#">pricing</a></li>
             <li><a href="#">portfolio</a></li>
+            <li><a class="hide" href="#">get started</a></li>
           </ul>
         </nav>
 
-        <button class="btn btn-inverse">get started</button>
+        <button class="btn | cta">get started</button>
       </div>
     </header>
 

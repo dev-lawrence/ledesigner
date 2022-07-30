@@ -1,0 +1,23 @@
+@use 'abstracts' as *;
+
+.container {
+  padding: 0rem 0.938rem;
+
+  @include landscape {
+    width: rem(576);
+    margin: 0 auto;
+  }
+
+  @include medium {
+    width: rem(850);
+    margin: 0 auto;
+  }
+
+  @include large {
+    width: rem(900);
+  }
+
+  @include extra-large {
+    width: rem(1200);
+  }
+}

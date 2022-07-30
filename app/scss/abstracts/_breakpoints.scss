@@ -1,12 +1,12 @@
 @use './functions' as *;
 $breakpoints: (
   'extra-small': rem(280),
-  'small': rem(320),
+  'small': rem(500),
   'landscape': rem(576),
   'medium': rem(768),
   'large': rem(1024),
   'extra-large': rem(1200),
-  'huge': rem(11400),
+  'huge': rem(1440),
 );
 
 @mixin extra-small {

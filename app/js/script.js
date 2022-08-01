@@ -1,7 +1,7 @@
 const toggle = document.querySelector('.toggle-menu');
 const navMenu = document.querySelector('.nav');
 const navList = document.querySelector('.nav__list');
-const navLinks = navList.querySelectorAll('a');
+const navLinks = document.querySelectorAll('.nav__link');
 
 // function to show the Navigation
 const showNav = () => {
@@ -12,8 +12,8 @@ const showNav = () => {
   close.classList.toggle('closeIcon');
 };
 
-// Function to change active link on click
-navLinks.forEach((link) => {
+// function to change active link
+const changeActiveLink = (link) => {
   link.addEventListener('click', () => {
     const active = document.querySelector('.active');
     active.classList.remove('active');
@@ -21,6 +21,9 @@ navLinks.forEach((link) => {
 
     showNav();
   });
-});
+};
+
+// Nav links
+navLinks.forEach(changeActiveLink);
 
 toggle.addEventListener('click', showNav);

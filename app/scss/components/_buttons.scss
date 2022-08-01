@@ -1,5 +1,14 @@
 @use 'abstracts' as *;
 
+// Styles for button
+button {
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: rem(6);
+  padding: rem(10) rem(20);
+  border: none;
+}
+
 // nav button
 @include medium {
   .cta {
@@ -16,4 +25,9 @@
       transform: scale(0.98);
     }
   }
+}
+
+// hero button
+.btn-accent {
+  background-color: var(--accent-clr-400);
 }

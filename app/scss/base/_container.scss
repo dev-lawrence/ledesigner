@@ -3,30 +3,42 @@
 .container {
   padding: 0 rem(15.008);
 
-  @include landscape {
-    width: rem(576);
-    margin: 0 auto;
+  @include tablet {
+    max-width: rem(576);
+    margin-inline: auto;
   }
 
-  @include medium {
-    width: rem(850);
-    margin: 0 auto;
+  @include desktop {
+    width: rem(768);
+    margin-inline: auto;
+  }
+
+  @include desktop-md {
+    width: rem(1000);
   }
 
   @include large {
-    width: rem(900);
+    width: rem(1200);
   }
 
   @include extra-large {
-    width: rem(1200);
+    width: rem(1440);
   }
 }
 
-.container--inverse {
-  padding: 0 rem(15.008);
+// .container--inverse {
+//   padding: 0;
 
-  @include landscape {
-    width: rem(576);
-    margin-right: auto;
-  }
-}
+//   @include medium {
+//     width: rem(900);
+//     margin-inline: auto;
+//   }
+
+//   @include large {
+//     width: rem(1200);
+//   }
+
+//   @include extra-large {
+//     width: rem(1440);
+//   }
+// }

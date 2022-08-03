@@ -18,13 +18,13 @@
 
 .toggle-menu {
   border: 0;
-  width: 10%;
+  width: 13%;
   font-size: $fs-150;
   display: inline-block;
   background-color: transparent;
   color: var(--white-clr);
 
-  @include medium {
+  @include desktop {
     display: none;
   }
 }
@@ -39,15 +39,5 @@
 
 // hide get started link
 .hide {
-  display: none;
-}
-
-@include small {
-  .cta {
-    display: none;
-  }
-}
-
-.cta {
   display: none;
 }

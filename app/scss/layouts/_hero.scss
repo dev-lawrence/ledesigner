@@ -2,13 +2,17 @@
 
 .hero {
   height: 100vh;
+  overflow-x: hidden;
+  display: none;
 
   .d-grid {
     height: 100%;
   }
 
   &__text {
-    padding-top: rem(120);
+    padding: rem(120) rem(15.008) 0 rem(15.008);
+    max-width: rem(500);
+    margin-inline: auto;
     line-height: 1.5;
 
     h1 {
@@ -21,7 +25,7 @@
         font-size: $fs-150;
       }
 
-      @include extra-large {
+      @include large {
         font-size: $fs-500;
       }
     }
@@ -61,12 +65,14 @@
     @include image-property();
   }
 
-  @include large {
+  @include tablet {
     &__img {
       background-image: url(../../../img/hero-2.png);
       height: 100%;
       width: 100%;
       @include image-property();
+      transform: translateX(5rem);
+      z-index: -1;
     }
 
     // might come back to it later
@@ -78,6 +84,12 @@
     .d-grid {
       @include grid(repeat(2, 1fr), 0);
       place-items: center;
+    }
+  }
+
+  @include extra-large {
+    &__img {
+      transform: translateX(0);
     }
   }
 }

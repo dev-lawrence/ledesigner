@@ -1,12 +1,11 @@
 @use './functions' as *;
 $breakpoints: (
   'extra-small': rem(280),
-  'small': rem(768),
-  'landscape': rem(576),
-  'medium': rem(769),
-  'large': rem(1024),
-  'extra-large': rem(1200),
-  'huge': rem(1440),
+  'tablet': rem(768),
+  'desktop': rem(769),
+  'desktop-md': rem(1024),
+  'large': rem(1200),
+  'extra-large': rem(1440),
 );
 
 @mixin extra-small {
@@ -15,20 +14,20 @@ $breakpoints: (
   }
 }
 
-@mixin small {
-  @media (max-width: map-get($breakpoints, 'small')) {
+@mixin tablet {
+  @media (max-width: map-get($breakpoints, 'tablet')) {
     @content;
   }
 }
 
-@mixin landscape {
-  @media (min-width: map-get($breakpoints, 'landscape')) {
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, 'desktop')) {
     @content;
   }
 }
 
-@mixin medium {
-  @media (min-width: map-get($breakpoints, 'medium')) {
+@mixin desktop-md {
+  @media (min-width: map-get($breakpoints, 'desktop-md')) {
     @content;
   }
 }
@@ -45,8 +44,8 @@ $breakpoints: (
   }
 }
 
-@mixin huge {
-  @media (min-width: map-get($breakpoints, 'huge')) {
-    @content;
-  }
-}
+// @mixin huge {
+//   @media (min-width: map-get($breakpoints, 'huge')) {
+//     @content;
+//   }
+// }

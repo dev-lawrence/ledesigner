@@ -10,7 +10,7 @@ button {
 }
 
 // nav button
-@include medium {
+@include desktop {
   .cta {
     display: block;
     text-transform: capitalize;

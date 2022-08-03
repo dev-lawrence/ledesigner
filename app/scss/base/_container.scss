@@ -26,19 +26,24 @@
   }
 }
 
-// .container--inverse {
-//   padding: 0;
+// contianer for the hero section
+.container--inverse {
+  padding: 0;
 
-//   @include medium {
-//     width: rem(900);
-//     margin-inline: auto;
-//   }
+  @include desktop {
+    width: rem(768);
+    margin-inline: auto;
+  }
 
-//   @include large {
-//     width: rem(1200);
-//   }
+  @include desktop-md {
+    width: rem(1000);
+  }
 
-//   @include extra-large {
-//     width: rem(1440);
-//   }
-// }
+  @include large {
+    width: rem(1200);
+  }
+
+  @include extra-large {
+    width: rem(1440);
+  }
+}

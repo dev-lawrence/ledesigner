@@ -2,8 +2,6 @@
 
 .hero {
   height: 100vh;
-  overflow-x: hidden;
-  display: none;
 
   .d-grid {
     height: 100%;
@@ -13,13 +11,13 @@
     padding: rem(120) rem(15.008) 0 rem(15.008);
     max-width: rem(500);
     margin-inline: auto;
-    line-height: 1.5;
 
     h1 {
       font-size: $fs-300;
       font-weight: 700;
       color: var(--white-clr);
       margin-bottom: rem(30);
+      line-height: 1.5;
 
       @include extra-small {
         font-size: $fs-150;
@@ -27,6 +25,7 @@
 
       @include large {
         font-size: $fs-500;
+        line-height: 1.2;
       }
     }
 
@@ -65,7 +64,9 @@
     @include image-property();
   }
 
-  @include tablet {
+  @include desktop {
+    overflow-x: hidden;
+
     &__img {
       background-image: url(../../../img/hero-2.png);
       height: 100%;

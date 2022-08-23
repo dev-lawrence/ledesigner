@@ -14,9 +14,7 @@
     @include grid(repeat(2, 1fr), 0);
 
     @include desktop {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex(center, space-between);
     }
   }
 

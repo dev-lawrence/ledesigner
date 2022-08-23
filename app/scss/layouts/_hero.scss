@@ -1,6 +1,5 @@
 @use 'abstracts' as *;
 
-// hero image has horizontal scroll bar at desktop screens and up
 .hero {
   height: rem(700);
 
@@ -76,12 +75,6 @@
       transform: translateX(rem(80));
       z-index: -1;
     }
-
-    // might come back to it later
-    // img {
-    //   object-fit: cover;
-    //   height: 100%;
-    // }
 
     .d-grid {
       @include grid(repeat(2, 1fr), 0);

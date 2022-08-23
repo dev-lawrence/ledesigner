@@ -15,7 +15,7 @@ button {
     display: block;
     text-transform: capitalize;
     background-color: var(--accent-clr-350);
-    padding: rem(10) rem(20);
+    padding: rem(10) rem(12);
     font-size: rem(16);
     border-radius: rem(6);
     cursor: pointer;
@@ -24,6 +24,13 @@ button {
     &:focus {
       transform: scale(0.98);
     }
+  }
+}
+
+@include desktop-md {
+  .cta {
+    padding-left: rem(20);
+    padding-right: rem(20);
   }
 }
 

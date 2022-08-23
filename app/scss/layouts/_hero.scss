@@ -1,7 +1,8 @@
 @use 'abstracts' as *;
 
+// hero image has horizontal scroll bar at desktop screens and up
 .hero {
-  height: 100vh;
+  height: rem(700);
 
   .d-grid {
     height: 100%;
@@ -54,13 +55,13 @@
 
   &__btn {
     margin-bottom: rem(50);
+    font-weight: 500;
   }
 
   &__img {
     background-image: url(../../../img/hero-img.jpg);
-    min-height: rem(500);
+    height: rem(350);
     width: 100%;
-
     @include image-property();
   }
 
@@ -72,7 +73,7 @@
       height: 100%;
       width: 100%;
       @include image-property();
-      transform: translateX(5rem);
+      transform: translateX(rem(80));
       z-index: -1;
     }
 

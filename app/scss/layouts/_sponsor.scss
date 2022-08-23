@@ -1,0 +1,77 @@
+@use 'abstracts' as *;
+
+.sponsored {
+  .container {
+    padding: 0;
+    padding-top: rem(120);
+
+    @include desktop {
+      padding-top: rem(60);
+    }
+  }
+
+  .d-grid {
+    @include grid(repeat(2, 1fr), 0);
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .content {
+    padding: 0 rem(15.008);
+    border-top: 1px solid #606265;
+    border-bottom: 1px solid #606265;
+
+    .row {
+      max-width: rem(300);
+      margin-inline: auto;
+      padding: rem(40) 0;
+
+      @include desktop {
+        max-width: rem(800);
+      }
+
+      img {
+        padding-bottom: rem(50);
+
+        @include desktop {
+          padding-bottom: 0;
+        }
+      }
+
+      img:nth-child(2) {
+        justify-self: flex-end;
+      }
+
+      img:nth-child(4) {
+        justify-self: flex-end;
+      }
+
+      img:nth-child(5) {
+        padding-bottom: 0;
+      }
+
+      img:nth-child(6) {
+        justify-self: flex-end;
+        padding-bottom: 0;
+      }
+
+      @include desktop {
+        img:nth-child(2) {
+          justify-self: flex-start;
+        }
+
+        img:nth-child(4) {
+          justify-self: flex-start;
+        }
+
+        img:nth-child(6) {
+          justify-self: flex-start;
+        }
+      }
+    }
+  }
+}

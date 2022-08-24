@@ -1,0 +1,94 @@
+@use 'abstracts' as *;
+
+.featured {
+  padding-top: $size-600;
+  text-align: center;
+
+  .text {
+    margin-bottom: rem(40);
+    text-align: left;
+    h2 {
+      font-size: $fs-200;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: $fs-100;
+      color: var(--light-clr);
+    }
+  }
+
+  &__card {
+    .card {
+      text-transform: capitalize;
+      text-align: left;
+      display: none;
+
+      &__text {
+        background-color: var(--accent-clr-200);
+        padding: rem(20) 0;
+      }
+
+      .img-bg {
+        background-color: var(--accent-clr-400);
+        border-radius: rem(16);
+        overflow: hidden;
+
+        &:hover img {
+          transform: translateY(rem(-0.1));
+        }
+      }
+
+      img {
+        margin-inline: auto;
+        transform: translateY(rem(32));
+        transition: transform 0.4s ease-in-out;
+      }
+
+      h4 {
+        font-size: rem(20);
+      }
+
+      p {
+        font-size: rem(15);
+        color: var(--accent-clr-300);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+
+        @include desktop {
+          margin-bottom: rem(0);
+        }
+      }
+
+      &:nth-child(1) {
+        display: block;
+      }
+
+      &:nth-child(2) {
+        display: block;
+      }
+
+      &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+
+  .btn-transparent {
+    margin-top: rem(25);
+    background-color: transparent;
+    color: var(--accent-clr-300);
+    border: 1px solid var(--accent-clr-300);
+    padding-left: rem(50);
+    padding-right: rem(50);
+    transition: all 350ms linear;
+
+    // &:hover {
+    // //   background-color: var(--accent-clr-400);
+    //   color: var(--black-clr);
+    //   border-color: var(--black-clr);
+    // }
+  }
+}

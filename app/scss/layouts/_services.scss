@@ -1,7 +1,7 @@
 @use 'abstracts' as *;
 
 .service {
-  padding-top: rem(100);
+  padding-top: $size-600;
 
   &__img {
     display: none;

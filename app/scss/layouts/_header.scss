@@ -4,6 +4,7 @@
   position: fixed;
   background-color: var(--bg-clr);
   width: 100%;
+  z-index: 1000;
 
   .container {
     position: relative;

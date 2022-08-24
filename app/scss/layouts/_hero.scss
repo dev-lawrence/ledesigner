@@ -23,6 +23,10 @@
         font-size: $fs-150;
       }
 
+      @include desktop-md {
+        font-size: $fs-350;
+      }
+
       @include large {
         font-size: $fs-500;
         line-height: 1.2;

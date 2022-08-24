@@ -20,6 +20,10 @@
       h2 {
         font-size: $fs-200;
         line-height: 1.3;
+
+        @include desktop-md {
+          font-size: $fs-350;
+        }
       }
 
       p {
@@ -71,16 +75,13 @@
 
   @include desktop {
     .service__cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: rem(20);
+      @include grid(repeat(2, 1fr), rem(20));
     }
   }
 
   @include large {
     .d-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      @include grid(repeat(2, 1fr), rem(20));
     }
 
     .card:nth-child(3) {

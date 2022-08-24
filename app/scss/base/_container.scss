@@ -30,6 +30,12 @@
 .container--inverse {
   padding: 0;
 
+  // under consideration
+  @include tablet {
+    max-width: rem(576);
+    margin-inline: auto;
+  }
+
   @include desktop {
     width: rem(768);
     margin-inline: auto;
@@ -62,7 +68,7 @@
   }
 
   @include large {
-    width: rem(700);
+    width: rem(750);
     margin-right: auto;
   }
 

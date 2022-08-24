@@ -85,10 +85,10 @@
     padding-right: rem(50);
     transition: all 350ms linear;
 
-    // &:hover {
-    // //   background-color: var(--accent-clr-400);
-    //   color: var(--black-clr);
-    //   border-color: var(--black-clr);
-    // }
+    &:hover {
+      background-color: var(--accent-clr-400);
+      color: var(--black-clr);
+      border-color: var(--black-clr);
+    }
   }
 }

@@ -1,25 +1,204 @@
 @use 'abstracts' as *;
 
 .plan {
-  padding-top: $size-600;
-
   display: none;
+}
 
-  .text {
-    margin-bottom: rem(40);
-    text-align: left;
-    h2 {
-      font-size: $fs-200;
-      line-height: 1.3;
+@include desktop-md {
+  .plan {
+    padding-top: $size-600;
+    display: block;
 
-      @include desktop-md {
+    .d-flex {
+      @include flex(center, space-between);
+    }
+
+    .text {
+      margin-bottom: rem(40);
+      text-align: left;
+      h2 {
         font-size: $fs-350;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: $fs-100;
+        color: var(--light-clr);
       }
     }
 
-    p {
-      font-size: $fs-100;
-      color: var(--light-clr);
+    .d-grid {
+      @include grid(repeat(3, 1fr), rem(20));
+    }
+
+    // toggle
+    label {
+      margin-right: 0.5rem;
+    }
+
+    input[type='radio'] {
+      margin: 0 -2px 0 -2px;
+      opacity: 0;
+      width: 27px;
+      height: 24px;
+      cursor: pointer;
+
+      &:focus ~ .toggle__button {
+        border: 3px solid var(--light-bg);
+      }
+    }
+
+    .toggle {
+      border: none;
+      display: flex;
+
+      &__wrapper {
+        position: relative;
+        height: rem(24);
+      }
+
+      &__background {
+        background-color: var(--accent-clr-400);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: rem(24);
+        pointer-events: none;
+      }
+
+      &__button {
+        position: absolute;
+        left: rem(1.5);
+        top: rem(1.6);
+        right: 100%;
+        width: rem(21);
+        height: rem(21);
+        border-radius: 50%;
+        background-color: var(--black-clr);
+        transition: all 250ms ease-in-out;
+      }
+    }
+
+    #year:checked ~ .toggle__button {
+      left: rem(28);
+    }
+
+    // plan card
+    &__card {
+      padding: rem(30);
+      background-color: var(--light-clr);
+      --black-clr: hsl(235, 14%, 15%);
+      color: var(--black-clr);
+      border-radius: rem(16);
+      overflow: hidden;
+
+      .price-tag {
+        display: inline-flex;
+        align-items: center;
+
+        span {
+          font-size: $fs-350;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: rem(12);
+        }
+      }
+
+      &--content {
+        margin-bottom: rem(70);
+
+        h3 {
+          text-transform: capitalize;
+          $fs-150: rem(24);
+          font-size: $fs-150;
+          margin-bottom: rem(3);
+        }
+
+        p {
+          font-size: $fs-50;
+        }
+      }
+
+      &--list {
+        margin-bottom: rem(70);
+
+        li {
+          margin-bottom: rem(16);
+          position: relative;
+          padding-left: rem(25);
+          font-size: $fs-50;
+
+          &::before {
+            content: '\f00c';
+            font-weight: 900;
+            font-family: 'Font Awesome 5 Free';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      .btn-card {
+        background-color: var(--black-clr);
+        color: var(--light-clr);
+        display: block;
+        width: 100%;
+        font-weight: 500;
+      }
+
+      &--tag {
+        position: relative;
+
+        &::before {
+          content: 'Best Value';
+          background-color: var(--black-clr);
+          color: var(--accent-clr-400);
+          text-align: center;
+          width: 100%;
+          height: 30%;
+          font-weight: 500;
+          position: absolute;
+          right: rem(-145);
+          top: 0;
+          transform: rotate(45deg);
+          @include flex(center, center);
+        }
+      }
+
+      &--inverse {
+        .price-tag {
+          span {
+            color: var(--accent-clr-400);
+          }
+        }
+
+        .border-bottom {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: rem(-40);
+            width: 100%;
+            height: rem(0.5);
+            background: #dadbdb;
+          }
+        }
+
+        background-color: var(--black-clr);
+        color: var(--light-clr);
+
+        .btn-card {
+          background-color: var(--accent-clr-400);
+          color: var(--black-clr);
+        }
+      }
     }
   }
 }

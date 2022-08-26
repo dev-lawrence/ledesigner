@@ -200,7 +200,7 @@
         </div>
       </section>
 
-      <!-- Plan section work on it after the pricing section-->
+      <!-- Plan section-->
       <section class="plan">
         <div class="container">
           <div class="d-flex">
@@ -209,19 +209,19 @@
               <p>What do we offer?</p>
             </div>
 
-            <!-- toggle switch -->
+            <!--price toggle switch  -->
             <div class="toggle__switch">
-              <!-- under consideration -->
-              <!-- <p>monthly/yearly</p> -->
               <fieldset
-                class="header__toggle toggle"
-                aria-label="theme toggle"
+                class="toggle"
+                aria-label="price-toggle"
                 role="radiogroup"
               >
-                <label for="dark">Monthly</label>
+                <label for="month">Monthly / </label>
+                <label for="year">yearly</label>
+
                 <div class="toggle__wrapper">
-                  <input type="radio" name="theme" id="dark" />
-                  <input type="radio" name="theme" id="light" />
+                  <input type="radio" name="theme" id="month" />
+                  <input type="radio" name="theme" id="year" />
                   <span aria-hidden="true" class="toggle__background"></span>
                   <span aria-hidden="true" class="toggle__button"></span>
                 </div>
@@ -230,22 +230,24 @@
           </div>
 
           <!-- plan card -->
-          <div class="plan__card">
-            <!-- card -->
-            <div class="card">
+          <div class="plan__cards d-grid">
+            <!-- card one-->
+            <div class="plan__card">
               <div>
-                <span
-                  >$39
-                  <p>/month</p></span
-                >
-                <h3>basic license</h3>
-                <p>
-                  This pack contains all the basic things which makes your
-                  workfolow easier!
-                </p>
+                <div class="price-tag">
+                  <span class="price basic-price">$39</span>
+                  <p class="season">/month</p>
+                </div>
+                <div class="plan__card--content">
+                  <h3>basic license</h3>
+                  <p>
+                    This pack contains all the basic things which makes your
+                    workfolow easier!
+                  </p>
+                </div>
               </div>
 
-              <ul role="list" class="card__list">
+              <ul role="list" class="plan__card--list">
                 <li>Unlimited Templates & Plugins</li>
                 <li>View basic analytics</li>
                 <li>Up to 350 customer profiles</li>
@@ -254,21 +256,23 @@
               <button class="btn btn-card">Your current plan</button>
             </div>
 
-            <!-- card -->
-            <div class="card card--tag">
-              <div>
-                <span
-                  >$69
-                  <p>/month</p></span
-                >
-                <h3>team license</h3>
-                <p>
-                  This pack contains all the basic things which makes your
-                  workfolow easier!
-                </p>
+            <!-- card two -->
+            <div class="plan__card">
+              <div class="plan__card--tag">
+                <div class="price-tag">
+                  <span class="price team-price">$69</span>
+                  <p class="season">/month</p>
+                </div>
+                <div class="plan__card--content">
+                  <h3>team license</h3>
+                  <p>
+                    This pack contains all the basic things which makes your
+                    workfolow easier!
+                  </p>
+                </div>
               </div>
 
-              <ul role="list" class="card__list">
+              <ul role="list" class="plan__card--list">
                 <li>Unlimited Templates & Plugins</li>
                 <li>View basic analytics</li>
                 <li>Up to 350 customer profiles</li>
@@ -277,21 +281,23 @@
               <button class="btn btn-card">Your current plan</button>
             </div>
 
-            <!-- card -->
-            <div class="card card--inverse">
+            <!-- card three -->
+            <div class="plan__card plan__card--inverse">
               <div>
-                <span
-                  >$139
-                  <p>/month</p></span
-                >
-                <h3>basic license</h3>
-                <p>
-                  This pack contains all the basic things which makes your
-                  workfolow easier!
-                </p>
+                <div class="price-tag">
+                  <span class="price enterprise-price">$139</span>
+                  <p class="season">/month</p>
+                </div>
+                <div class="plan__card--content border-bottom">
+                  <h3>Enterprise license</h3>
+                  <p>
+                    This pack contains all the basic things which makes your
+                    workfolow easier!
+                  </p>
+                </div>
               </div>
 
-              <ul role="list" class="card__list">
+              <ul role="list" class="plan__card--list">
                 <li>Unlimited Templates & Plugins</li>
                 <li>View basic analytics</li>
                 <li>Up to 350 customer profiles</li>

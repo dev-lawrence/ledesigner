@@ -1,11 +1,20 @@
+// Nav menu
 const toggle = document.querySelector('.toggle-menu');
 const navMenu = document.querySelector('.nav');
 const navList = document.querySelector('.nav__list');
 const navLinks = document.querySelectorAll('.nav__link');
+
+// Testimonial carousel
 const loadMore = document.querySelector('#load-more');
 const carouselSlide = document.querySelector('.testimonial__cards');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
+
+// Monthly and yearly plans
+const yearButton = document.querySelector('#year');
+const radioButton = document.querySelectorAll('.toggle__wrapper input');
+const season = document.querySelectorAll('.season');
+const price = document.querySelectorAll('.price');
 
 // FUNCTION TO SHOW THE NAVIGATION
 const showNav = () => {
@@ -92,3 +101,58 @@ const prevSlide = () => {
 
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
+
+// PLANS SECTION - monthly and yearly plans
+let yearly = localStorage.getItem('yearly');
+
+const yearlyPrice = () => {
+  document.querySelector('.basic-price').textContent = '$69';
+  document.querySelector('.team-price').textContent = '$138';
+  document.querySelector('.enterprise-price').textContent = '$276';
+};
+
+const monthlyPrice = () => {
+  document.querySelector('.basic-price').textContent = '$39';
+  document.querySelector('.team-price').textContent = '$69';
+  document.querySelector('.enterprise-price').textContent = '$139';
+};
+
+// enable yearly price
+const enableYearly = () => {
+  // yearly season
+  season.forEach((season) => {
+    season.textContent = '/year';
+  });
+
+  // yearly price
+  yearlyPrice();
+
+  localStorage.setItem('yearly', 'enabled');
+};
+
+// enable monthly price
+const enableMonthly = () => {
+  season.forEach((season) => {
+    season.textContent = '/month';
+  });
+
+  monthlyPrice();
+
+  localStorage.setItem('yearly', null);
+};
+
+if (yearly === 'enabled') {
+  enableYearly();
+  yearButton.click();
+}
+
+radioButton.forEach((button) => {
+  yearly = localStorage.getItem('yearly');
+  button.addEventListener('click', () => {
+    if (yearButton.checked) {
+      enableYearly();
+    } else {
+      enableMonthly();
+    }
+  });
+});

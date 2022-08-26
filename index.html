@@ -52,10 +52,7 @@
           </div>
 
           <!-- hero image -->
-          <div class="hero__img">
-            <!-- Might use this code later -->
-            <!-- <img src="./img/hero-img.jpg" alt="" /> -->
-          </div>
+          <div class="hero__img"></div>
         </div>
       </section>
 
@@ -70,9 +67,6 @@
               <img src="./img/airbnb.svg" alt="image" />
               <img src="./img/hubspot.svg" alt="image" />
               <img src="./img/google.svg" alt="image" />
-              <!-- <img src="./img/microsoft.svg" alt="image" /> -->
-              <!-- <img src="./img/walmart.svg" alt="image" /> -->
-              <!-- <img src="./img/fedex.svg" alt="image" /> -->
             </div>
           </div>
         </div>
@@ -475,33 +469,46 @@
         </div>
       </section>
 
-      <!-- contact section -->
+      <!-- contact section add netlify form validation-->
       <section class="contact">
-        <div class="container--inverse">
-          <div class="circle"></div>
-          <h2>contact us</h2>
-          <form class="form">
-            <div class="d-flex">
-              <div class="row">
-                <label for="name">name*</label>
-                <input id="name" type="text" />
+        <div class="container--inverse contact__content">
+          <div class="d-flex">
+            <form class="form" data-netlify="true">
+              <h2>Contact Us</h2>
+              <div class="form__control d-grid">
+                <div class="input-control">
+                  <label for="name">name*</label><br />
+                  <input name="name" id="name" type="text" />
+                </div>
+                <div class="input-control">
+                  <label for="email">email*</label><br />
+                  <input name="email" id="email" type="email" required />
+                </div>
+              </div>
+              <div class="input-control">
+                <label for="message">message*</label><br />
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
               </div>
 
-              <div class="row">
-                <label for="email">email*</label>
-                <input id="email" type="email" />
+              <p class="info">
+                Your email address will not be published. Required fields are
+                marked *
+              </p>
+              <div class="center">
+                <button class="btn btn-accent">send message</button>
               </div>
+            </form>
+            <div class="contact__img">
+              <img src="./img/contact-img.png" alt="" />
             </div>
+          </div>
 
-            <div>
-              <label for="message">message*</label>
-              <textarea id="message" cols="30" rows="10"></textarea>
-            </div>
-            <button class="btn btn-pry">send message</button>
-          </form>
           <div class="curve-line"></div>
-
-          <div class="side-img"></div>
         </div>
       </section>
     </main>

@@ -24,9 +24,13 @@ html:focus-within {
 
 /* A elements that don't have a class get default styles */
 a,
-span {
-  text-decoration: none;
+span,
+label {
   display: inline-block;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Make images easier to work with */

@@ -1,0 +1,134 @@
+@use 'abstracts' as *;
+
+.contact {
+  padding: $size-600 rem(15.008) 0 rem(15.008);
+
+  &__content {
+    position: relative;
+  }
+
+  &__img {
+    display: none;
+  }
+
+  h2 {
+    margin-bottom: rem(40);
+    font-size: $fs-200;
+    line-height: 1.3;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(50);
+      height: rem(50);
+      top: rem(-25);
+      right: rem(50);
+      background-image: url(../../../img/circle-5.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+
+      @include extra-small {
+        top: rem(-50);
+      }
+
+      @include large {
+        top: rem(-80);
+        left: 0;
+        background-position: left;
+      }
+    }
+
+    @include desktop-md {
+      font-size: $fs-350;
+    }
+  }
+
+  .form {
+    label {
+      text-transform: capitalize;
+      margin-bottom: rem(8);
+    }
+
+    &__control {
+      .input-control {
+        margin-bottom: rem(20);
+      }
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+      width: 100%;
+      border-radius: rem(5);
+      outline: none;
+      padding-left: rem(10);
+      font-size: $fs-50;
+      border: none;
+      background-color: var(--light-clr);
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      height: rem(45);
+    }
+
+    textarea {
+      padding-top: rem(10);
+      font-size: $fs-50;
+      margin-bottom: rem(5);
+    }
+
+    .info {
+      margin-bottom: rem(20);
+      font-style: italic;
+    }
+
+    .center {
+      text-align: center;
+
+      @include desktop-md {
+        text-align: left;
+      }
+    }
+
+    @include desktop {
+      .d-grid {
+        @include grid(repeat(2, 1fr), rem(20));
+      }
+    }
+  }
+
+  @include desktop-md {
+    overflow-x: hidden;
+
+    &__img {
+      transform: translateX(rem(80));
+      z-index: -1;
+      display: block;
+    }
+
+    .d-flex {
+      @include grid(repeat(2, 1fr), 0);
+      place-items: center;
+    }
+  }
+
+  @include extra-large {
+    &__img {
+      transform: translateX(0);
+    }
+  }
+
+  .curve-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: rem(50);
+    height: rem(50);
+    background-image: url(../../../img/curve-1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

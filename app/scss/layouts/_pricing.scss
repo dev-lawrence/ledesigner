@@ -1,7 +1,12 @@
 @use 'abstracts' as *;
 
+.pricing {
+  display: none;
+}
+
 @include tablet {
   .pricing {
+    display: block;
     padding-top: $size-600;
     text-align: center;
 

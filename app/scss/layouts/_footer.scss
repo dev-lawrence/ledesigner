@@ -1,0 +1,138 @@
+@use 'abstracts' as *;
+
+.footer {
+  padding-top: $size-600;
+  --light-clr: #d9dbe1;
+
+  p,
+  a {
+    color: var(--light-clr);
+  }
+
+  &__about {
+    max-width: rem(500);
+    img {
+      margin-bottom: rem(20);
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: rem(20);
+    }
+  }
+
+  h4 {
+    margin-bottom: rem(30);
+    font-size: rem(20);
+  }
+
+  .social__links {
+    margin-bottom: rem(20);
+
+    a {
+      color: var(--white-clr);
+      --accent-clr-300: hsl(0, 2%, 25%);
+      background-color: var(--accent-clr-300);
+      border-radius: 100vmax;
+      height: rem(40);
+      width: rem(40);
+      text-align: center;
+      font-size: rem(17);
+      line-height: rem(40);
+      margin-right: rem(5);
+      transition: transform 0.3s ease-in;
+
+      &:hover {
+        transform: translateY(rem(-3));
+      }
+    }
+  }
+
+  &__nav,
+  &__update {
+    display: none;
+  }
+
+  @include desktop-md {
+    &__nav,
+    &__update {
+      display: block;
+    }
+
+    .d-grid {
+      @include grid(repeat(3, 1fr), rem(30));
+    }
+
+    &__nav {
+      @include flex(center, flex-end);
+
+      li {
+        margin-bottom: rem(16);
+      }
+
+      a {
+        color: var(--light-clr);
+        transition: color 150ms ease-in;
+
+        &:hover {
+          color: var(--accent-clr-400);
+        }
+      }
+
+      &--primary {
+        margin-right: rem(100);
+      }
+    }
+
+    &__update {
+      justify-self: flex-end;
+      width: 90%;
+
+      .form {
+        position: relative;
+
+        input[type='email'] {
+          width: 100%;
+          height: rem(45);
+          background-color: var(--accent-clr-250);
+          border: none;
+          outline: none;
+          border-radius: rem(5);
+          padding-left: rem(10);
+          color: var(--light-clr);
+          font-size: $fs-50;
+        }
+
+        ::placeholder {
+          color: var(--light-clr);
+        }
+      }
+
+      .kite {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: rem(22.8);
+        transform: translateY(-50%);
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--accent-clr-250);
+        height: 100%;
+        width: 15%;
+        border-radius: rem(0);
+        border-top-right-radius: rem(5);
+        border-bottom-right-radius: rem(5);
+        padding: 0;
+        padding-right: rem(5);
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: rem(60) 0 rem(40);
+  }
+}

@@ -469,7 +469,7 @@
         </div>
       </section>
 
-      <!-- contact section add netlify form validation-->
+      <!-- contact section -->
       <section class="contact">
         <div class="container--inverse contact__content">
           <div class="d-flex">
@@ -478,7 +478,7 @@
               <div class="form__control d-grid">
                 <div class="input-control">
                   <label for="name">name*</label><br />
-                  <input name="name" id="name" type="text" />
+                  <input name="name" id="name" type="text" required />
                 </div>
                 <div class="input-control">
                   <label for="email">email*</label><br />
@@ -492,6 +492,7 @@
                   id="message"
                   cols="30"
                   rows="10"
+                  required
                 ></textarea>
               </div>
 
@@ -516,7 +517,7 @@
     <!-- footer section -->
     <footer class="footer">
       <div class="container d-grid">
-        <div>
+        <div class="footer__about">
           <img src="./img/logo.svg" aria-label="logo" alt="Logo" />
           <p>
             Digital agency creating world-changing digital experiences by
@@ -524,14 +525,14 @@
           </p>
           <div class="social__links">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fa-solid fa-basketball"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
-        <nav role="list" class="footer__nav">
-          <ul class="nav--list">
+        <nav class="footer__nav">
+          <ul role="list" class="footer__nav--primary">
             <h4>Company</h4>
             <li><a href="#">About us</a></li>
             <li><a href="#">Blog</a></li>
@@ -540,7 +541,7 @@
             <li><a href="#">Testimonials</a></li>
           </ul>
 
-          <ul class="nav--list">
+          <ul role="list" class="nav--list">
             <h4>Support</h4>
             <li><a href="#">Help center</a></li>
             <li><a href="#">Terms of service</a></li>
@@ -550,16 +551,23 @@
           </ul>
         </nav>
 
-        <div class="update">
+        <div class="footer__update">
           <h4>Stay up to date!</h4>
-          <form>
-            <input type="text" placeholder="Your email address" />
-            <img src="./img/kite.svg" alt="" />
+          <form class="form" data-netlify="true">
+            <input
+              name="email"
+              type="email"
+              placeholder="Your email address"
+              required
+            />
+            <button class="kite" type="submit">
+              <img src="./img/kite.svg" alt="" />
+            </button>
           </form>
         </div>
       </div>
 
-      <p>Copyright © 2020 LeDesigner</p>
+      <p class="copyright">Copyright © 2020 LeDesigner</p>
     </footer>
   </body>
 </html>

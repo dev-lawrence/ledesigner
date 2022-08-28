@@ -43,7 +43,7 @@
   }
 }
 
-@include desktop {
+@include desktop-md {
   .pricing {
     display: none;
   }

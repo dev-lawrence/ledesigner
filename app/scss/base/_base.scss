@@ -1,6 +1,7 @@
 @use 'abstracts' as *;
 
 body {
+  -webkit-text-size-adjust: 100%;
   background-color: var(--bg-clr);
   color: var(--light-clr);
   font-family: $pry-font;

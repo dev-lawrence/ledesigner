@@ -1,7 +1,11 @@
 @use 'abstracts' as *;
 
 .hero {
-  height: rem(700);
+  height: rem(890);
+
+  @include desktop {
+    height: rem(700);
+  }
 
   .d-grid {
     height: 100%;
@@ -13,11 +17,12 @@
     margin-inline: auto;
 
     h1 {
+      $fs-300: rem(35);
       font-size: $fs-300;
       font-weight: 700;
       color: var(--white-clr);
-      margin-bottom: rem(30);
-      line-height: 1.5;
+      margin-bottom: rem(16);
+      line-height: 1.3;
 
       @include extra-small {
         font-size: $fs-150;
@@ -25,6 +30,7 @@
 
       @include desktop-md {
         font-size: $fs-350;
+        margin-bottom: rem(30);
       }
 
       @include large {
@@ -62,8 +68,8 @@
 
   &__img {
     background-image: url(../../../img/hero-img.jpg);
-    height: rem(350);
     width: 100%;
+    height: rem(340);
     @include image-property();
   }
 
@@ -82,6 +88,12 @@
     .d-grid {
       @include grid(repeat(2, 1fr), 0);
       place-items: center;
+    }
+  }
+
+  @include large {
+    &__img {
+      transform: translateX(rem(90));
     }
   }
 

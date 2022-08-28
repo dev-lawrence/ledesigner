@@ -19,11 +19,12 @@
 
 .toggle-menu {
   border: 0;
-  width: 13%;
   font-size: $fs-150;
   display: inline-block;
   background-color: transparent;
   color: var(--white-clr);
+  padding: 0;
+  padding-right: rem(5);
 
   @include desktop {
     display: none;

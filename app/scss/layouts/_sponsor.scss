@@ -3,7 +3,6 @@
 .sponsored {
   .container {
     padding: 0;
-    padding-top: rem(120);
 
     @include desktop {
       padding-top: rem(60);

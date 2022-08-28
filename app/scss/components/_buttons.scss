@@ -1,12 +1,13 @@
 @use 'abstracts' as *;
 
-// Styles for button
+// general styles for all buttons
 button {
   text-transform: capitalize;
   cursor: pointer;
   border-radius: rem(6);
-  padding: rem(10) rem(20);
+  padding: rem(13) rem(30);
   border: none;
+  font-size: rem(16);
 }
 
 // nav button

@@ -38,7 +38,6 @@ const changeActiveLink = (link) => {
 
 // NAV LINKS
 navLinks.forEach(changeActiveLink);
-
 toggle.addEventListener('click', showNav);
 
 // LOAD MORE BUTTON FOR FEATURED SECTION

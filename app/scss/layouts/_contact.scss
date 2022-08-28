@@ -104,9 +104,14 @@
     overflow-x: hidden;
 
     &__img {
-      transform: translateX(rem(80));
-      z-index: -1;
       display: block;
+
+      img {
+        transform: translateX(rem(120));
+        z-index: -1;
+        width: rem(550);
+        background-color: transparent;
+      }
     }
 
     .d-flex {
